@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "HRICHI GOVILKAR",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -118.2, "left": -26, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 131.45, "left": 11.73, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -186.39,
+      "left": -3.21,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -162.05,
+      "left": 158.12,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -30.19,
+      "left": 373.56,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bb1:bp.1", "black", [ "v0" ] ],
+    [ "bb1:15t.c", "r1:1", "green", [ "v0" ] ],
+    [ "led1:C", "bb1:15t.a", "green", [ "v0" ] ],
+    [ "bb1:17t.a", "led1:A", "green", [ "v0" ] ],
+    [ "r1:2", "bb1:bp.20", "green", [ "v0" ] ],
+    [ "bb1:17t.c", "uno:13", "green", [ "v0" ] ],
+    [ "bz1:1", "bb1:bp.25", "green", [ "v0" ] ],
+    [ "bz1:2", "uno:8", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
